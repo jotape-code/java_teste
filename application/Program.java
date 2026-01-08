@@ -2,7 +2,7 @@ package application;
 
 import java.util.Locale;
 import java.util.Scanner;
-import entities.Rectangle;
+import entities.Employee;
 
 public class Program{
     
@@ -10,19 +10,21 @@ public class Program{
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        Employee employee = new Employee();
 
-        Rectangle rectangle = new Rectangle();
+        System.out.print("Name: ");
+        employee.name = sc.nextLine();
+        System.out.print("Gross Salary: ");
+        employee.grossSalary = sc.nextDouble();
+        System.out.println("Tax: ");
+        employee.tax = sc.nextDouble();
 
-        System.out.println("Enter rectangle width and height: ");
-        rectangle.width = sc.nextDouble();
-        rectangle.height = sc.nextDouble();
-        System.out.printf("Área: %.2f%n", rectangle.Area());
-        System.out.printf("Perimeter: %.2f%n", rectangle.Perimeter());
-        System.out.printf("Diagonal: %.2f%n", rectangle.Diagonal());
+        System.out.println("Employee: " + employee);
+        System.out.println("Which percentage to increase salary: ");
+        employee.
 
 
 
-
-
+        sc.close();
     }
 }

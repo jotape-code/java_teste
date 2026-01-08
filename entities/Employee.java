@@ -1,17 +1,19 @@
 package entities;
 
-public class Rectangle {
-    public double width;
-    public double height;
+public class Employee{
+    public String name;
+    public double grossSalary;
+    public double tax; 
 
-    public double Area(){
-        return width * height;
+    public double NetSalary(){
+        return grossSalary - tax;
     }
-    public double Perimeter(){
-        return 2 * (width + height);
+    public void IncreaseSalary(double percentage){
+        grossSalary += percentage * grossSalary;
     }
-    public double Diagonal(){
-        return Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+    public String toString(){
+        return String.format("%s, $ %d", name, NetSalary());
     }
+
 
 }
