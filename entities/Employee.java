@@ -9,10 +9,10 @@ public class Employee{
         return grossSalary - tax;
     }
     public void IncreaseSalary(double percentage){
-        grossSalary += percentage * grossSalary;
+        grossSalary += percentage/100 * grossSalary;
     }
     public String toString(){
-        return String.format("%s, $ %d", name, NetSalary());
+        return String.format("%s, $ %.2f", name, NetSalary());
     }
 
 

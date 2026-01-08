@@ -16,12 +16,13 @@ public class Program{
         employee.name = sc.nextLine();
         System.out.print("Gross Salary: ");
         employee.grossSalary = sc.nextDouble();
-        System.out.println("Tax: ");
+        System.out.print("Tax: ");
         employee.tax = sc.nextDouble();
 
         System.out.println("Employee: " + employee);
         System.out.println("Which percentage to increase salary: ");
-        employee.
+        employee.IncreaseSalary(sc.nextDouble());
+        System.out.println("Updated data: " + employee);
 
 
 
