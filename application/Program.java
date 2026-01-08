@@ -2,7 +2,7 @@ package application;
 
 import java.util.Locale;
 import java.util.Scanner;
-import entities.Employee;
+import entities.Student;
 
 public class Program{
     
@@ -10,19 +10,17 @@ public class Program{
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        Employee employee = new Employee();
-
+        Student student = new Student();
+        
         System.out.print("Name: ");
-        employee.name = sc.nextLine();
-        System.out.print("Gross Salary: ");
-        employee.grossSalary = sc.nextDouble();
-        System.out.print("Tax: ");
-        employee.tax = sc.nextDouble();
+        student.name = sc.nextLine();
+        System.out.print("Notas: ");
+        student.nota1 = sc.nextFloat();
+        student.nota2 = sc.nextFloat();
+        student.nota3 = sc.nextFloat();
+        System.out.println(student);
 
-        System.out.println("Employee: " + employee);
-        System.out.println("Which percentage to increase salary: ");
-        employee.IncreaseSalary(sc.nextDouble());
-        System.out.println("Updated data: " + employee);
+
 
 
 
