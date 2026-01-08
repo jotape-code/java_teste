@@ -10,7 +10,16 @@ public class Program{
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        Student student = new Student();
         
+        System.out.print("Name: ");
+        student.name = sc.nextLine();
+        System.out.print("Notas: ");
+        student.nota1 = sc.nextFloat();
+        student.nota2 = sc.nextFloat();
+        student.nota3 = sc.nextFloat();
+        System.out.println(student);
+
 
 
 
