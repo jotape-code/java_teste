@@ -2,7 +2,7 @@ package application;
 
 import java.util.Locale;
 import java.util.Scanner;
-import entities.Student;
+import util.CurrencyConverter;
 
 public class Program{
     
@@ -10,15 +10,15 @@ public class Program{
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        Student student = new Student();
+
+        double price;
+        double qtd;
         
-        System.out.print("Name: ");
-        student.name = sc.nextLine();
-        System.out.print("Notas: ");
-        student.nota1 = sc.nextFloat();
-        student.nota2 = sc.nextFloat();
-        student.nota3 = sc.nextFloat();
-        System.out.println(student);
+        System.out.print("What is the dollar price: ");
+        price = sc.nextDouble();
+        System.out.print("How many dollars will be bought: ");
+        qtd = sc.nextDouble();
+        System.out.printf("Amount to be paid in reais = %.2f", CurrencyConverter.conversor(price, qtd));
 
 
 
