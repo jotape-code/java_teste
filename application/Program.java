@@ -2,7 +2,7 @@ package application;
 
 import java.util.Locale;
 import java.util.Scanner;
-import entities.Account;
+
 
 public class Program{
     
@@ -11,33 +11,19 @@ public class Program{
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter account number: ");
-        int number = sc.nextInt();
-        sc.nextLine();
-        System.out.print("Enter account holder: ");
-        String name = sc.nextLine();
-        System.out.print("Is there any initial deposit(y/n)? ");
-        char opc = sc.next().charAt(0);
-        opc = Character.toUpperCase(opc);
-
-        double deposit = 0;
-        if(opc == 'Y'){
-            System.out.println("Enter initial deposit value: ");
-            deposit = sc.nextDouble();
+        System.out.print("Quantos números você vai digitar: ");
+        int n = sc.nextInt();
+        int[] vect = new int[n];
+        for(int i = 0; i < vect.length; i++){
+            System.out.print("Digite um número: ");
+            vect[i] = sc.nextInt();
         }
-        Account account = new Account(name, number, deposit);
-        System.out.println("Account data:\n" + account);
-
-        System.out.print("Enter a deposit value: ");
-        deposit = sc.nextDouble();
-        account.deposit(deposit);
-        System.out.println("Update account data: \n" + account);
-
-        System.out.println("Enter a withdraw value: ");
-        deposit = sc.nextDouble();
-        account.withdraw(deposit);
-        System.out.println("Update account data: \n" + account);
-
+        System.out.println("Números negativos: ");
+        for(int i = 0; i < vect.length; i++){
+            if(vect[i] < 0){
+                System.out.println(vect[i]);
+            }
+        }
 
 
 
