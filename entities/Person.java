@@ -1,15 +1,15 @@
 package entities;
 
 
-public class Account{
+public class Person{
     private String name;
-    private int number;
-    private double balance;
-
-    public Account(String name, int number, double balance){
+    private int age;
+    private double height;
+    
+    public Person(String name, int age, double height){
         this.name = name;
-        this.number = number;
-        this.balance = balance;
+        this.age = age;
+        this.height = height;
     }
 
     public String getName(){
@@ -20,19 +20,31 @@ public class Account{
         this.name = name;
     }
 
-    public int getNumber(){
-        return number;
-    }
-    
-    public void withdraw(double qtd){
-        balance -= qtd + 5;
+    public int getAge(){
+        return age;
     }
 
-    public void deposit(double qtd){
-        balance += qtd;
+    public void setAge(int age){
+        this.age = age;
     }
 
-    public String toString(){
-        return String.format("Account: %d, Holder: %s, Balance: $ %.2f", number, name, balance);
+    public double getHeight(){
+        return height;
     }
+
+    public void setHeight(double height){
+        this.height = height;
+    }
+
+    public boolean ageCheck(){
+        if(age < 16){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+     
+
 }
